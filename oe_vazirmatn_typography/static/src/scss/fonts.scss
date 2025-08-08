@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Vazirmatn;
+    src: url('/oe_vazirmatn_typography/static/src/fonts/vazirmatn/woff2/Vazirmatn[wght].woff2') format('woff2 supports variations'),
+        url('/oe_vazirmatn_typography/static/src/fonts/vazirmatn/woff2/Vazirmatn[wght].woff2') format('woff2-variations');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: VazirmatnFD;
+    src: url('/oe_vazirmatn_typography/static/src/fonts/vazirmatn/woff2/Vazirmatn-FD-Regular.woff2') format('woff2');
+    font-style: normal;
+    font-display: swap;
+}

@@ -1,0 +1,16 @@
+.o_rtl{
+    // .badge,
+    // .o_pager_counter,
+    // td[name='invoice_date'],
+    // .o_list_number,
+    // .o_field_integer,
+    // .o_field_remaining_days,
+    // .o_kanban_record,
+    // .o_field_text[name='company_informations'],
+    // .o-autocomplete > input,
+    * {
+        &:not(.fa):not(.oi){
+            font-family: VazirmatnFD;
+        }
+    }
+}

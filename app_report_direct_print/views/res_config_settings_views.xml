@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="app_res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">app.res.config.settings.view.form</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <!-- <xpath expr="//setting[@id='company_details_settings']" position="inside"> -->
+                <xpath expr="//block[@name='companies_setting_container']" position="inside">
+                    <setting id="app_print_pdf_mode" help="Setup the Report Print Mode.">
+                        <field name="app_print_pdf_mode"/>
+                    </setting>
+                    <setting id="app_print_auto" help="When enable, the report would auto print to default printer." invisible="app_print_pdf_mode != 'preview'">
+                        <field name="app_print_auto"/>
+                    </setting>
+                        <!-- <div class="col-12 col-lg-6 o_setting_box" id="app_print_auto_setup">
+                            <div class="o_setting_right_pane">
+                                <span class="o_form_label">Print Mode</span>
+                                <div class="text-muted">
+                                    Setup the Report Print Mode.
+                                </div>
+                                <div class="content-group">
+                                    <div class="mt8 ml16 row">
+                                        <field name="app_print_pdf_mode" class="oe_inline"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="o_setting_left_pane" attrs="{'invisible': [('app_print_pdf_mode', '!=', 'preview')]}">
+                                <field name="app_print_auto"/>
+                            </div>
+                            <div class="o_setting_right_pane" attrs="{'invisible': [('app_print_pdf_mode', '!=', 'preview')]}">
+                                <label for="app_print_auto"/>
+                                <div class="text-muted">
+                                    When enable, the report would auto print to default printer.
+                                </div>
+                            </div>
+                        </div> -->
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

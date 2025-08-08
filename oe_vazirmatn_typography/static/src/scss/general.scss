@@ -1,0 +1,17 @@
+.oe_website_sale {
+    .breadcrumb {
+        .breadcrumb-item {
+            &::before {
+                font-family: FontAwesome;
+            }
+        }
+    }
+}
+
+.en-digit {
+    font-family: Vazirmatn !important;
+}
+
+.fa-digit {
+    font-family: VazirmatnFD !important;
+}

@@ -1,0 +1,17 @@
+$default-font: 'Vazirmatn';
+
+@function o-add-unicode-support-font($font, $index: false) {
+    @if $index == false {
+        $index: length($font);
+    }
+
+    $-with-support-font: ();
+    @for $i from 1 through length($font) {
+        @if $i == $index {
+            $-with-support-font: append($-with-support-font, $default-font, $separator: comma);
+        }
+        $-with-support-font: append($-with-support-font, nth($font, $i), $separator: comma);
+    }
+
+    @return $-with-support-font;
+}

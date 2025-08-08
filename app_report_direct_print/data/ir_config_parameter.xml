@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<odoo>
+    <data noupdate="1">
+        <function model="ir.config_parameter" name="set_param" eval="('app_print_pdf_mode', 'preview')"/>
+        <function model="ir.config_parameter" name="set_param" eval="('app_print_auto', 'True')"/>
+    </data>
+</odoo>

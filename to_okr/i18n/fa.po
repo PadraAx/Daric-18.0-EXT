@@ -1,0 +1,958 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_okr
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240603\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-19 11:56+0000\n"
+"PO-Revision-Date: 2024-08-19 11:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid ""
+"<select id=\"quarter\" class=\"select\" style=\"text-align: left; width: 80%;height:35px;\" required=\"True\" default=\"false\" name=\"quarters\" placeholder=\"Choose an option\">\n"
+"                                                <option value=\"\"/>\n"
+"                                                <option value=\"q1\">Q1</option>\n"
+"                                                <option value=\"q2\">Q2</option>\n"
+"                                                <option value=\"q3\">Q3</option>\n"
+"                                                <option value=\"q4\">Q4</option>\n"
+"                                            </select>"
+msgstr ""
+"<select id=\"Quarter\" class=\"select\" style=\"text-align: left; width: 80%;height:35px;\" require=\"True\" default=\"false\" name=\"Quarters\" placeholder=\"Choose an option\">\n"
+"                                                <option value=\"\"/>\n"
+"                                                <option value=\"q1\">Q1</option>\n"
+"                                                <option value=\"q2\">Q2</option>\n"
+"                                                <option value=\"q3\">Q3</option>\n"
+"                                                <option value=\"q4\">Q4</option>\n"
+"                                            </select>"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid ""
+"<select id=\"rates\" class=\"select\" style=\"text-align: left; width: 80%; height: 35px;\" required=\"True\" default=\"false\" name=\"rate\" placeholder=\"Choose an option\" onchange=\"updateResult(); updateProgressBar()\">\n"
+"                                                <option value=\"\"/>\n"
+"                                                <option value=\"1\">1</option>\n"
+"                                                <option value=\"2\">2</option>\n"
+"                                                <option value=\"3\">3</option>\n"
+"                                                <option value=\"4\">4</option>\n"
+"                                            </select>"
+msgstr ""
+"<select id=\"rates\" class=\"select\" style=\"text-align: left; width: 80%; height: 35px;\" require=\"True\" default=\"false\" name=\"rate\" placeholder=\"انتخاب گزینه\" onchange=\"updateResult(); updateProgressBar()\">\n"
+"                                                <option value=\"\"/>\n"
+"                                                <option value=\"1\">1</option>\n"
+"                                                <option value=\"2\">2</option>\n"
+"                                                <option value=\"3\">3</option>\n"
+"                                                <option value=\"4\">4</option>\n"
+"                                            </select>"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid ""
+"<select id=\"resu\" class=\"select\" style=\"text-align: left; width: 80%;height:35px;\" required=\"True\" default=\"false\" name=\"resu1\" placeholder=\"Choose an option\">\n"
+"                                                <option value=\"\"/>\n"
+"                                                <option value=\"2\">Pass</option>\n"
+"                                                <option value=\"3\">Fail</option>\n"
+"                                            </select>"
+msgstr ""
+"<select id=\"resu\" class=\"select\" style=\"text-align: left; width: 80%;height:35px;\" require=\"True\" default=\"false\" name=\"resu1\" placeholder=\"Choose an option\">\n"
+"                                                <option value=\"\"/>\n"
+"                                                <option value=\"2\">مجوز</option>\n"
+"                                                <option value=\"3\">ناموفق</option>\n"
+"                                            </select>"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_needaction
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_needaction
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_needaction
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_needaction
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_needaction
+msgid "Action Needed"
+msgstr "اقدام مورد نیاز"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_ids
+msgid "Activities"
+msgstr "فعالیت ها"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_exception_decoration
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "دکوراسیون استثنایی فعالیت"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_state
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_state
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_state
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_state
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_state
+msgid "Activity State"
+msgstr "وضعیت فعالیت"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_type_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_type_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_type_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_type_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "نماد نوع فعالیت"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_objective_to_portal
+msgid "Add objectives and competencies"
+msgstr "اهداف و شایستگی ها را اضافه کنید"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Alex..."
+msgstr "الکس..."
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to Submit?"
+msgstr "آیا مطمئن هستید، می خواهید ارسال کنید؟"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to send it to Cancel Stage?"
+msgstr "آیا مطمئن هستید که می خواهید آن را به Cancel Stage ارسال کنید؟"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to send it to Confirm Stage?"
+msgstr "آیا مطمئن هستید که می خواهید آن را به مرحله تأیید ارسال کنید؟"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to send it to Done Stage?"
+msgstr "آیا مطمئن هستید که می خواهید آن را به مرحله انجام شده ارسال کنید؟"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to send it to HOD?"
+msgstr "آیا مطمئن هستید که می خواهید آن را به HOD بفرستید؟"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to send it to HR?"
+msgstr "آیا مطمئن هستید که می خواهید آن را به HR بفرستید؟"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Are you sure, you want to send it to Team Leader Rating Stage?"
+msgstr ""
+"آیا مطمئن هستید که می خواهید آن را به مرحله رتبه بندی رهبر تیم ارسال کنید؟"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__attach1
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__attach
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Attachment"
+msgstr "پیوست"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_attachment_count
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_attachment_count
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_attachment_count
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_attachment_count
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "تعداد پیوست"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__bench1
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__bench
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Benchmark"
+msgstr "معیار"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Cancel"
+msgstr "لغو کنید"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__stage__cancel
+msgid "Cancelled"
+msgstr "لغو شد"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__checkk
+msgid "Check"
+msgstr "بررسی کنید"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__target__com
+msgid "Comapny"
+msgstr "شرکت"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__company
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__company
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Company"
+msgstr "شرکت"
+
+#. module: to_okr
+#: model:ir.actions.act_window,name:to_okr.action_comp_form
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__competencies
+#: model:ir.ui.menu,name:to_okr.okr_comp_root
+msgid "Competencies"
+msgstr "شایستگی ها"
+
+#. module: to_okr
+#: model:ir.ui.menu,name:to_okr.okr_configuration
+msgid "Configuration"
+msgstr "پیکربندی"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Confirm"
+msgstr "تایید"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__stage__confirm
+msgid "Confirmed"
+msgstr "تایید شد"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__connecting_field
+msgid "Connecting Field"
+msgstr "فیلد اتصال"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Create"
+msgstr "ایجاد کنید"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__create_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__create_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__create_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__create_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__create_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__create_uid
+msgid "Created by"
+msgstr "ایجاد شده توسط"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__create_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__create_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__create_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__create_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__create_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__create_date
+msgid "Created on"
+msgstr "ایجاد شده در"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__date1
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__date
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Date"
+msgstr "تاریخ"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__department
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__department
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__target__dep
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Department"
+msgstr "بخش"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__description
+msgid "Description"
+msgstr "توضیحات"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Details..."
+msgstr "جزئیات..."
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__display_name
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__display_name
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__display_name
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__display_name
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__display_name
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__display_name
+msgid "Display Name"
+msgstr "نام نمایشی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__doc_date
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Document Date"
+msgstr "تاریخ سند"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__state__done
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Done"
+msgstr "انجام شد"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__state__draft
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__stage__draft
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Draft"
+msgstr "پیش نویس"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__employee
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Employee"
+msgstr "کارمند"
+
+#. module: to_okr
+#: model:ir.actions.act_window,name:to_okr.action_okr_form
+msgid "Employee OKR Form"
+msgstr "فرم OKR کارمند"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__state__em_r
+#: model:res.groups,name:to_okr.group_okr_employee_rating
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Employee Rating"
+msgstr "رتبه بندی کارکنان"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__target__em
+msgid "Employee's"
+msgstr "کارمند"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Employee's Rating"
+msgstr "رتبه بندی کارمندان"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__end_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__end_date
+msgid "End Date"
+msgstr "تاریخ پایان"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__ev_on
+msgid "Evaluation on"
+msgstr "ارزیابی در"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_comp__result1__fail
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result1__fail
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result2__fail
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result3__fail
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result__fail
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_objective__result__fail
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Fail"
+msgstr "شکست بخورد"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_follower_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_follower_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_follower_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_follower_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_follower_ids
+msgid "Followers"
+msgstr "پیروان"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_partner_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_partner_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_partner_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_partner_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "دنبال کنندگان (شریک)"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__activity_type_icon
+#: model:ir.model.fields,help:to_okr.field_okr_form__activity_type_icon
+#: model:ir.model.fields,help:to_okr.field_okr_objective__activity_type_icon
+#: model:ir.model.fields,help:to_okr.field_okr_time__activity_type_icon
+#: model:ir.model.fields,help:to_okr.field_okr_type__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "نماد عالی فونت به عنوان مثال کارهای فا"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Four"
+msgstr "چهار"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Group By"
+msgstr "گروه توسط"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__state__hod_r
+#: model:res.groups,name:to_okr.group_okr_hod_rating
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "HOD Rating"
+msgstr "رتبه بندی HOD"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__state__hr_r
+#: model:res.groups,name:to_okr.group_okr_hr_rating
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "HR Rating"
+msgstr "رتبه بندی منابع انسانی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__has_message
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__has_message
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__has_message
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__has_message
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__has_message
+msgid "Has Message"
+msgstr "دارای پیام"
+
+#. module: to_okr
+#: model:ir.module.category,description:to_okr.module_category_to_okr
+msgid "Help you to manage OKR Evaluation."
+msgstr "به شما کمک می کند تا ارزیابی OKR را مدیریت کنید."
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__id
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__id
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__id
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__id
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__id
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__id
+msgid "ID"
+msgstr "شناسه"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_exception_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_exception_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_exception_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_exception_icon
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_exception_icon
+msgid "Icon"
+msgstr "نماد"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__activity_exception_icon
+#: model:ir.model.fields,help:to_okr.field_okr_form__activity_exception_icon
+#: model:ir.model.fields,help:to_okr.field_okr_objective__activity_exception_icon
+#: model:ir.model.fields,help:to_okr.field_okr_time__activity_exception_icon
+#: model:ir.model.fields,help:to_okr.field_okr_type__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "نمادی برای نشان دادن یک فعالیت استثنایی."
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__message_needaction
+#: model:ir.model.fields,help:to_okr.field_okr_form__message_needaction
+#: model:ir.model.fields,help:to_okr.field_okr_objective__message_needaction
+#: model:ir.model.fields,help:to_okr.field_okr_time__message_needaction
+#: model:ir.model.fields,help:to_okr.field_okr_type__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "اگر علامت زده شود، پیام‌های جدید به توجه شما نیاز دارند."
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__message_has_error
+#: model:ir.model.fields,help:to_okr.field_okr_comp__message_has_sms_error
+#: model:ir.model.fields,help:to_okr.field_okr_form__message_has_error
+#: model:ir.model.fields,help:to_okr.field_okr_form__message_has_sms_error
+#: model:ir.model.fields,help:to_okr.field_okr_objective__message_has_error
+#: model:ir.model.fields,help:to_okr.field_okr_objective__message_has_sms_error
+#: model:ir.model.fields,help:to_okr.field_okr_time__message_has_error
+#: model:ir.model.fields,help:to_okr.field_okr_time__message_has_sms_error
+#: model:ir.model.fields,help:to_okr.field_okr_type__message_has_error
+#: model:ir.model.fields,help:to_okr.field_okr_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "اگر علامت زده شود، برخی از پیام ها دارای خطای تحویل هستند."
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_is_follower
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_is_follower
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_is_follower
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_is_follower
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_is_follower
+msgid "Is Follower"
+msgstr "فالوور است"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__write_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__write_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__write_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__write_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__write_uid
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__write_uid
+msgid "Last Updated by"
+msgstr "آخرین به روز رسانی توسط"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__write_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__write_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__write_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__write_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__write_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__write_date
+msgid "Last Updated on"
+msgstr "آخرین به روز رسانی در"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_has_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_has_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_has_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_has_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطای تحویل پیام"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_ids
+msgid "Messages"
+msgstr "پیام ها"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__my_activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__my_activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__my_activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__my_activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "مهلت فعالیت من"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__name
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__name
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__name
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Name"
+msgstr "نام"
+
+#. module: to_okr
+#. odoo-python
+#: code:addons/to_okr/models/okr.py:0 code:addons/to_okr/models/okr.py:0
+#: code:addons/to_okr/models/okr.py:0 code:addons/to_okr/models/okr.py:0
+#, python-format
+msgid "New"
+msgstr "جدید"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_date_deadline
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "مهلت فعالیت بعدی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_summary
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_summary
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_summary
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_summary
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_summary
+msgid "Next Activity Summary"
+msgstr "خلاصه فعالیت بعدی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_type_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_type_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_type_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_type_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع فعالیت بعدی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__note1
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__note
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Note"
+msgstr "یادداشت"  
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_needaction_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_needaction_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_needaction_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_needaction_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "تعداد اقدامات"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_has_error_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_has_error_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_has_error_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_has_error_counter
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "تعداد خطاها"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__message_needaction_counter
+#: model:ir.model.fields,help:to_okr.field_okr_form__message_needaction_counter
+#: model:ir.model.fields,help:to_okr.field_okr_objective__message_needaction_counter
+#: model:ir.model.fields,help:to_okr.field_okr_time__message_needaction_counter
+#: model:ir.model.fields,help:to_okr.field_okr_type__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "تعداد پیام هایی که نیاز به اقدام دارند"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__message_has_error_counter
+#: model:ir.model.fields,help:to_okr.field_okr_form__message_has_error_counter
+#: model:ir.model.fields,help:to_okr.field_okr_objective__message_has_error_counter
+#: model:ir.model.fields,help:to_okr.field_okr_time__message_has_error_counter
+#: model:ir.model.fields,help:to_okr.field_okr_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "تعداد پیام های دارای خطای تحویل"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__okr_line
+#: model:ir.module.category,name:to_okr.module_category_to_okr
+#: model:ir.ui.menu,name:to_okr.okr_form
+msgid "OKR"
+msgstr "OKR"
+
+#. module: to_okr
+#: model:ir.model,name:to_okr.model_okr_comp
+msgid "OKR Competencies"
+msgstr "صلاحیت های OKR"
+
+#. module: to_okr
+#: model:ir.model,name:to_okr.model_okr_form
+#: model:ir.ui.menu,name:to_okr.okr_form_root
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "OKR Form"
+msgstr "فرم OKR"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__okr_no
+msgid "OKR NO"
+msgstr "OKR NO"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_objective_to_portal
+msgid "OKR Objective / Competencies"
+msgstr "OKR هدف / شایستگی ها"
+
+#. module: to_okr
+#: model:ir.model,name:to_okr.model_okr_objective
+msgid "OKR Objectives"
+msgstr "اهداف OKR"
+
+#. module: to_okr
+#: model:ir.model,name:to_okr.model_okr_type
+msgid "OKR Type"
+msgstr "نوع OKR"
+
+#. module: to_okr
+#: model:ir.actions.act_window,name:to_okr.action_objective_form
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__objective
+#: model:ir.ui.menu,name:to_okr.okr_objective_root
+msgid "Objective"
+msgstr "هدف"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_objective_breadcrums
+msgid "Objective / Competencies"
+msgstr "هدف / شایستگی ها"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "One"
+msgstr "یکی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__owner
+msgid "Owner"
+msgstr "مالک"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_comp__result1__pas
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result1__pas
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result2__pas
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result3__pas
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_line__result__pas
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_objective__result__pas
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Pass"
+msgstr "پاس"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__percentage1
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__percentage
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Percentage"
+msgstr "درصد"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Please add objective &amp; competencies."
+msgstr "لطفا هدف و شایستگی ها"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__point
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__point1
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__point2
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__point3
+msgid "Points"
+msgstr "امتیاز"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__progress
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__progress1
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__progress2
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__progress3
+msgid "Progress"
+msgstr "پیشرفت"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__quarter__q1
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_time__quarter__q1
+msgid "Q1"
+msgstr "Q1"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__quarter__q2
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_time__quarter__q2
+msgid "Q2"
+msgstr "Q2"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__quarter__q3
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_time__quarter__q3
+msgid "Q3"
+msgstr "Q3"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__quarter__q4
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_time__quarter__q4
+msgid "Q4"
+msgstr "Q4"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__quarter
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__quarter
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Quarter"
+msgstr "ربع"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__rate1
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__rate
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Rating"
+msgstr "رتبه بندی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__rating_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__rating_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__rating_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__rating_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__rating_ids
+msgid "Ratings"
+msgstr "رتبه بندی ها"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_comp_tree
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_comp_view_form
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_tree
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_objective_tree
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_objective_view_form
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_time_tree
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_time_view_form
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_type_tree
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_type_view_form
+msgid "Record rules"
+msgstr "قوانین را ثبت کنید"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__activity_user_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__activity_user_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__activity_user_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__activity_user_id
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__activity_user_id
+msgid "Responsible User"
+msgstr "کاربر مسئول"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__result1
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__result
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__result1
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__result2
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__result3
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__result
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Result"
+msgstr "نتیجه"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__message_has_sms_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__message_has_sms_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__message_has_sms_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__message_has_sms_error
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطای تحویل پیامک"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "Save"
+msgstr "ذخیره کنید"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__stage
+msgid "Stage"
+msgstr "مرحله"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__start_date
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__start_date
+msgid "Start Date"
+msgstr "تاریخ شروع"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__state
+msgid "State"
+msgstr "وضعیت"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__activity_state
+#: model:ir.model.fields,help:to_okr.field_okr_form__activity_state
+#: model:ir.model.fields,help:to_okr.field_okr_objective__activity_state
+#: model:ir.model.fields,help:to_okr.field_okr_time__activity_state
+#: model:ir.model.fields,help:to_okr.field_okr_type__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"وضعیت بر اساس فعالیت ها\n"
+"سررسید: تاریخ سررسید گذشته است\n"
+"امروز: تاریخ فعالیت امروز است\n"
+"برنامه ریزی شده: فعالیت های آینده."
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Submit"
+msgstr "ارسال کنید"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__target
+msgid "Target"
+msgstr "هدف"
+
+#. module: to_okr
+#: model:ir.model.fields.selection,name:to_okr.selection__okr_form__state__team_l_r
+#: model:res.groups,name:to_okr.group_okr_team_leader_rating
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_view_form
+msgid "Team Leader Rating"
+msgstr "رتبه بندی رهبر تیم"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Three"
+msgstr "سه"
+
+#. module: to_okr
+#: model:ir.actions.act_window,name:to_okr.action_time_form
+#: model:ir.model,name:to_okr.model_okr_time
+#: model:ir.ui.menu,name:to_okr.okr_time_root
+msgid "Time Period"
+msgstr "دوره زمانی"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__name
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__title
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_form_search
+msgid "Title"
+msgstr "عنوان"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.okr_obj_list_view
+msgid "Two"
+msgstr "دو"
+
+#. module: to_okr
+#: model:ir.actions.act_window,name:to_okr.action_type_form
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__type
+#: model:ir.ui.menu,name:to_okr.okr_type_root
+msgid "Type"
+msgstr "نوع"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__activity_exception_decoration
+#: model:ir.model.fields,help:to_okr.field_okr_form__activity_exception_decoration
+#: model:ir.model.fields,help:to_okr.field_okr_objective__activity_exception_decoration
+#: model:ir.model.fields,help:to_okr.field_okr_time__activity_exception_decoration
+#: model:ir.model.fields,help:to_okr.field_okr_type__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع فعالیت استثنا در ثبت."
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_comp__website_message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__website_message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_objective__website_message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__website_message_ids
+#: model:ir.model.fields,field_description:to_okr.field_okr_type__website_message_ids
+msgid "Website Messages"
+msgstr "پیام های وب سایت"
+
+#. module: to_okr
+#: model:ir.model.fields,help:to_okr.field_okr_comp__website_message_ids
+#: model:ir.model.fields,help:to_okr.field_okr_form__website_message_ids
+#: model:ir.model.fields,help:to_okr.field_okr_objective__website_message_ids
+#: model:ir.model.fields,help:to_okr.field_okr_time__website_message_ids
+#: model:ir.model.fields,help:to_okr.field_okr_type__website_message_ids
+msgid "Website communication history"
+msgstr "تاریخچه ارتباطات وب سایت"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_line__weight
+msgid "Weight%"
+msgstr "وزن %"
+
+#. module: to_okr
+#: model:ir.model.fields,field_description:to_okr.field_okr_form__year
+#: model:ir.model.fields,field_description:to_okr.field_okr_time__year
+msgid "Year"
+msgstr "سال"
+
+#. module: to_okr
+#: model_terms:ir.ui.view,arch_db:to_okr.abd_create
+msgid "abc..."
+msgstr "abc..."
+
+#. module: to_okr
+#: model:ir.model,name:to_okr.model_okr_line
+msgid "okr.line"
+msgstr "okr.line"

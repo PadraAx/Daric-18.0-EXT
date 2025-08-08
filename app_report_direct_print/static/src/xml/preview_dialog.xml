@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+  <t t-name="app_report_direct_print.PreviewDialog" owl="1">
+    <Dialog title="props.title" modalRef="modalRef" contentClass="'print_content'">
+        <div t-name="ViewerJSFrame" class="o_preview_viewerjs">
+            <iframe allowfullscreen="allowfullscreen"
+                    webkitallowfullscreen="webkitallowfullscreen"
+                    t-att-src="props.url">
+            </iframe>
+        </div>
+        <t t-set-slot="footer" owl="1">
+            <button class="btn btn-primary" t-on-click="_cancel" t-esc="props.confirmLabel"/>
+        </t>
+    </Dialog>
+  </t>
+</templates>
